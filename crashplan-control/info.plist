@@ -4,7 +4,7 @@
 <plist version="1.0">
   <dict>
     <key>bundleid</key>
-    <string>org.kollectiv.crashPlan</string>
+    <string>com.gilbarbara.crashplan-control</string>
     <key>category</key>
     <string>Tools</string>
     <key>connections</key>

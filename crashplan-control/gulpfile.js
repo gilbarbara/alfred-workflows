@@ -2,7 +2,7 @@ const gulp = require('gulp');
 const $ = require('gulp-load-plugins')();
 const del = require('del');
 
-const file = 'CrashPlanControl.alfredworkflow';
+const file = 'crashplan-control.alfredworkflow';
 
 const clean = () => del(['dist']);
 
