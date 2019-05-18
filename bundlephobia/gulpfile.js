@@ -2,7 +2,7 @@ const gulp = require('gulp');
 const $ = require('gulp-load-plugins')();
 const del = require('del');
 
-const file = 'BundlePhobia.alfredworkflow';
+const file = 'bundlephobia.alfredworkflow';
 
 const clean = () => del(['dist']);
 

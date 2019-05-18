@@ -4,7 +4,7 @@
 <plist version="1.0">
   <dict>
     <key>bundleid</key>
-    <string>com.gilbarbara.cpf-cnpj-generator</string>
+    <string>com.gilbarbara.cpf-generator</string>
     <key>connections</key>
     <dict>
       <key>B8068536-AE17-4368-AB7E-9AB402E79AAB</key>

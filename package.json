@@ -21,11 +21,11 @@
     "gulp-zip": "^4.2"
   },
   "scripts": {
+    "build:bundlephobia": "gulp -f bundlephobia/gulpfile.js",
     "build:cpf-cnpj-generator": "gulp -f cpf-cnpj-generator/gulpfile.js",
     "build:crashplan-control": "gulp -f crashplan-control/gulpfile.js",
     "build:genpass": "gulp -f genpass/gulpfile.js",
     "build:mdn-search": "gulp -f mdn-search/gulpfile.js",
-    "build:bundlephobia": "gulp -f bundlephobia/gulpfile.js",
-    "build": "npm run build:cpf-cnpj-generator && npm run build:crashplan-control && npm run build:genpass && npm run build:mdn-search && npm run build:bundlephobia"
+    "build": "npm run build:bundlephobia && npm run build:cpf-cnpj-generator && npm run build:crashplan-control && npm run build:genpass && npm run build:mdn-search"
   }
 }
