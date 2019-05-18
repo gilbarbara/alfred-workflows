@@ -135,6 +135,6 @@
     <key>version</key>
     <string>1.0</string>
     <key>webaddress</key>
-    <string>http://kollectiv.org</string>
+    <string>https://github.com/gilbarbara/alfred-workflows/tree/master/crashplan-control</string>
   </dict>
 </plist>
