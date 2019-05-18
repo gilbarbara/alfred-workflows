@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN"
+    "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+  <dict>
+    <key>bundleid</key>
+    <string>org.kollectiv.crashPlan</string>
+    <key>category</key>
+    <string>Tools</string>
+    <key>connections</key>
+    <dict>
+      <key>1AFBD55A-16F3-45E4-8430-144E1F47F4DC</key>
+      <array>
+        <dict>
+          <key>destinationuid</key>
+          <string>9146B8A4-7839-49D7-95D0-EE16ED1D9916</string>
+          <key>modifiers</key>
+          <integer>0</integer>
+          <key>modifiersubtext</key>
+          <string></string>
+        </dict>
+      </array>
+      <key>9146B8A4-7839-49D7-95D0-EE16ED1D9916</key>
+      <array>
+        <dict>
+          <key>destinationuid</key>
+          <string>0C8F83BF-E91F-4739-B078-71B55E4457DE</string>
+          <key>modifiers</key>
+          <integer>0</integer>
+          <key>modifiersubtext</key>
+          <string></string>
+        </dict>
+      </array>
+    </dict>
+    <key>createdby</key>
+    <string>Gil Barbara</string>
+    <key>description</key>
+    <string>start/stop Crash Plan</string>
+    <key>disabled</key>
+    <false />
+    <key>name</key>
+    <string>CrashPlan Control</string>
+    <key>objects</key>
+    <array>
+      <dict>
+        <key>config</key>
+        <dict>
+          <key>argumenttype</key>
+          <integer>1</integer>
+          <key>escaping</key>
+          <integer>126</integer>
+          <key>keyword</key>
+          <string>cp</string>
+          <key>script</key>
+          <string>. options.sh</string>
+          <key>subtext</key>
+          <string>start | stop | restart</string>
+          <key>title</key>
+          <string>CrashPlan Control</string>
+          <key>type</key>
+          <integer>0</integer>
+          <key>withspace</key>
+          <false />
+        </dict>
+        <key>type</key>
+        <string>alfred.workflow.input.scriptfilter</string>
+        <key>uid</key>
+        <string>1AFBD55A-16F3-45E4-8430-144E1F47F4DC</string>
+        <key>version</key>
+        <integer>0</integer>
+      </dict>
+      <dict>
+        <key>config</key>
+        <dict>
+          <key>lastpathcomponent</key>
+          <false />
+          <key>onlyshowifquerypopulated</key>
+          <true />
+          <key>output</key>
+          <integer>0</integer>
+          <key>removeextension</key>
+          <false />
+          <key>sticky</key>
+          <false />
+          <key>text</key>
+          <string>{query}</string>
+          <key>title</key>
+          <string>CrashPlan</string>
+        </dict>
+        <key>type</key>
+        <string>alfred.workflow.output.notification</string>
+        <key>uid</key>
+        <string>0C8F83BF-E91F-4739-B078-71B55E4457DE</string>
+        <key>version</key>
+        <integer>0</integer>
+      </dict>
+      <dict>
+        <key>config</key>
+        <dict>
+          <key>escaping</key>
+          <integer>127</integer>
+          <key>script</key>
+          <string>do shell script "sh crashPlan.sh {query}" with administrator privileges</string>
+          <key>type</key>
+          <integer>6</integer>
+        </dict>
+        <key>type</key>
+        <string>alfred.workflow.action.script</string>
+        <key>uid</key>
+        <string>9146B8A4-7839-49D7-95D0-EE16ED1D9916</string>
+        <key>version</key>
+        <integer>0</integer>
+      </dict>
+    </array>
+    <key>readme</key>
+    <string>Control CrashPlan service</string>
+    <key>uidata</key>
+    <dict>
+      <key>0C8F83BF-E91F-4739-B078-71B55E4457DE</key>
+      <dict>
+        <key>ypos</key>
+        <real>10</real>
+      </dict>
+      <key>1AFBD55A-16F3-45E4-8430-144E1F47F4DC</key>
+      <dict>
+        <key>ypos</key>
+        <real>10</real>
+      </dict>
+      <key>9146B8A4-7839-49D7-95D0-EE16ED1D9916</key>
+      <dict>
+        <key>ypos</key>
+        <real>10</real>
+      </dict>
+    </dict>
+    <key>version</key>
+    <string>1.0</string>
+    <key>webaddress</key>
+    <string>http://kollectiv.org</string>
+  </dict>
+</plist>

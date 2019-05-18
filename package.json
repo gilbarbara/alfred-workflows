@@ -1,0 +1,31 @@
+{
+  "name": "alfred-workflows",
+  "description": "Workflow for Alfred",
+  "version": "1.0.0",
+  "homepage": "https://github.com/gilbarbara/alfred-workflows",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gilbarbara/alfred-workflows.git"
+  },
+  "author": {
+    "name": "Gil Barbara",
+    "email": "gilbarbara@gmail.com",
+    "url": "https://github.com/gilbarbara"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "del": "^4.1",
+    "gulp": "^4.0",
+    "gulp-load-plugins": "^1.5",
+    "gulp-symlink": "^2.1",
+    "gulp-zip": "^4.2"
+  },
+  "scripts": {
+    "build:cpf-cnpj-generator": "gulp -f cpf-cnpj-generator/gulpfile.js",
+    "build:crashplan-control": "gulp -f crashplan-control/gulpfile.js",
+    "build:genpass": "gulp -f genpass/gulpfile.js",
+    "build:mdn-search": "gulp -f mdn-search/gulpfile.js",
+    "build:bundlephobia": "gulp -f bundlephobia/gulpfile.js",
+    "build": "npm run build:cpf-cnpj-generator && npm run build:crashplan-control && npm run build:genpass && npm run build:mdn-search && npm run build:bundlephobia"
+  }
+}
