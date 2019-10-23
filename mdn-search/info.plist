@@ -88,7 +88,14 @@
 		</dict>
 	</array>
 	<key>readme</key>
-	<string></string>
+	<string>Search MDN, the learning platform for Web technologies and the software that powers the Web, including:
+
+- Web standards such as CSS, HTML, and JavaScript
+- Open Web app development
+- Firefox add-on development
+
+https://developer.mozilla.org/
+	</string>
 	<key>uidata</key>
 	<dict>
 		<key>B8068536-AE17-4368-AB7E-9AB402E79AAB</key>
@@ -102,6 +109,8 @@
 			<real>10</real>
 		</dict>
 	</dict>
+	<key>version</key>
+	<string>1.1</string>
 	<key>webaddress</key>
 	<string>https://github.com/gilbarbara/alfred-workflows/tree/master/mdn-search</string>
 </dict>

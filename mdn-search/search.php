@@ -1,6 +1,6 @@
 <?php
-$url = 'https://developer.mozilla.org/en-US/';
-$search_url = $url . 'search.json?q=';
+$baseURL = 'https://developer.mozilla.org/en-US/docs/';
+$apiURL = 'https://developer.mozilla.org/api/v1/search/en-US?q=';
 
 $query = $argv[1];
 $results = array();
@@ -47,8 +47,8 @@ function toxml($a = null, $format = 'array') {
 $results[] = array(
     'uid' => 'placeholder',
     'title' => 'Go to the website',
-    'subtitle' => $url,
-    'arg' => $url,
+    'subtitle' => $baseURL,
+    'arg' => $baseURL,
     'icon' => 'icon.png',
     'valid' => 'yes'
 );
@@ -56,7 +56,7 @@ $results[] = array(
 $curl = curl_init();
 curl_setopt_array($curl, array(
     CURLOPT_RETURNTRANSFER => 1,
-    CURLOPT_URL => $search_url . $query,
+    CURLOPT_URL => $apiURL . $query,
 ));
 $output = curl_exec($curl);
 curl_close($curl);
@@ -70,7 +70,7 @@ if (!empty($data) && $data->count > 0) {
             'uid' => $d->slug,
             'title' => $d->title,
             'subtitle' => strip_tags($d->excerpt),
-            'arg' => $d->url,
+            'arg' => $baseURL . $d->slug,
             'icon' => 'icon.png',
             'valid' => 'yes'
         );
@@ -80,7 +80,7 @@ if (!empty($data) && $data->count > 0) {
         'uid' => 'placeholder',
         'title' => 'No documents were found that matched "'.$query.'".',
         'subtitle' => 'Click to see the results for yourself',
-        'arg' => $url . 'search?q=' . $query,
+        'arg' => $baseURL . 'search?q=' . $query,
         'icon' => 'icon.png',
         'valid' => 'yes'
     );
