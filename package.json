@@ -14,11 +14,10 @@
   },
   "license": "MIT",
   "devDependencies": {
-    "del": "^4.1",
+    "del": "^5.1",
     "gulp": "^4.0",
-    "gulp-load-plugins": "^1.5",
-    "gulp-symlink": "^2.1",
-    "gulp-zip": "^4.2"
+    "gulp-load-plugins": "^2.0",
+    "gulp-zip": "^5.0"
   },
   "scripts": {
     "build:bundlephobia": "gulp -f bundlephobia/gulpfile.js",
