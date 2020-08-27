@@ -17,6 +17,8 @@
 				<integer>0</integer>
 				<key>modifiersubtext</key>
 				<string></string>
+				<key>vitoclose</key>
+				<false/>
 			</dict>
 		</array>
 	</dict>
@@ -39,6 +41,10 @@
 				<integer>102</integer>
 				<key>script</key>
 				<string>open {query}</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
 				<key>type</key>
 				<integer>0</integer>
 			</dict>
@@ -47,11 +53,19 @@
 			<key>uid</key>
 			<string>B880FB3B-9AAA-48ED-A646-05935287E399</string>
 			<key>version</key>
-			<integer>0</integer>
+			<integer>2</integer>
 		</dict>
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<false/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
 				<key>argumenttype</key>
 				<integer>0</integer>
 				<key>escaping</key>
@@ -70,10 +84,14 @@
 				<string>Searching...</string>
 				<key>script</key>
 				<string>php -f search.php -- "{query}"</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
 				<key>subtext</key>
-				<string>ex: mdn addEventListener</string>
+				<string></string>
 				<key>title</key>
-				<string>mdn {search}</string>
+				<string>Search MDN for '{query}'</string>
 				<key>type</key>
 				<integer>0</integer>
 				<key>withspace</key>
@@ -84,7 +102,7 @@
 			<key>uid</key>
 			<string>B8068536-AE17-4368-AB7E-9AB402E79AAB</string>
 			<key>version</key>
-			<integer>0</integer>
+			<integer>3</integer>
 		</dict>
 	</array>
 	<key>readme</key>
@@ -94,23 +112,28 @@
 - Open Web app development
 - Firefox add-on development
 
-https://developer.mozilla.org/
-	</string>
+https://developer.mozilla.org/</string>
 	<key>uidata</key>
 	<dict>
 		<key>B8068536-AE17-4368-AB7E-9AB402E79AAB</key>
 		<dict>
+			<key>xpos</key>
+			<integer>300</integer>
 			<key>ypos</key>
 			<real>10</real>
 		</dict>
 		<key>B880FB3B-9AAA-48ED-A646-05935287E399</key>
 		<dict>
+			<key>xpos</key>
+			<integer>500</integer>
 			<key>ypos</key>
 			<real>10</real>
 		</dict>
 	</dict>
+	<key>variablesdontexport</key>
+	<array/>
 	<key>version</key>
-	<string>1.1</string>
+	<string>1.1.1</string>
 	<key>webaddress</key>
 	<string>https://github.com/gilbarbara/alfred-workflows/tree/master/mdn-search</string>
 </dict>
