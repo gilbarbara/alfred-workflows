@@ -14,7 +14,7 @@
   },
   "license": "MIT",
   "devDependencies": {
-    "del": "^5.1",
+    "del": "^6.0",
     "gulp": "^4.0",
     "gulp-load-plugins": "^2.0",
     "gulp-zip": "^5.0"
