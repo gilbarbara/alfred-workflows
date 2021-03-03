@@ -1,6 +1,6 @@
 <?php
-$baseURL = 'https://developer.mozilla.org/en-US/docs/';
-$apiURL = 'https://developer.mozilla.org/api/v1/search/en-US?q=';
+$baseURL = 'https://developer.mozilla.org';
+$apiURL = 'https://developer.mozilla.org/api/v1/search?q=';
 
 $query = $argv[1];
 $results = array();
@@ -18,12 +18,12 @@ function toxml($a = null, $format = 'array') {
         return false;
     endif;
 
-    $items = new SimpleXMLElement("<items></items>");    // Create new XML element
+    $items = new SimpleXMLElement("<items></items>"); // Create new XML element
 
-    foreach ($a as $b):                                // Lop through each object in the array
-        $c = $items->addChild('item');                // Add a new 'item' element for each object
-        $c_keys = array_keys($b);                        // Grab all the keys for that item
-        foreach ($c_keys as $key):                        // For each of those keys
+    foreach ($a as $b): // Lop through each object in the array
+        $c = $items->addChild('item'); // Add a new 'item' element for each object
+        $c_keys = array_keys($b); // Grab all the keys for that item
+        foreach ($c_keys as $key): // For each of those keys
             if ($key == 'uid'):
                 $c->addAttribute('uid', $b[$key]);
             elseif ($key == 'arg'):
@@ -40,15 +40,15 @@ function toxml($a = null, $format = 'array') {
         endforeach;
     endforeach;
 
-    return $items->asXML();                                // Return XML string representation of the array
+    return $items->asXML(); // Return XML string representation of the array
 
 }
 
 $results[] = array(
     'uid' => 'placeholder',
     'title' => 'Go to the website',
-    'subtitle' => $baseURL,
-    'arg' => $baseURL,
+    'subtitle' => $baseURL . '/en-US/docs',
+    'arg' => $baseURL . '/en-US/docs',
     'icon' => 'icon.png',
     'valid' => 'yes'
 );
@@ -64,13 +64,13 @@ $data = json_decode($output);
 
 $results = array();
 
-if (!empty($data) && $data->count > 0) {
+if (!empty($data) && count($data->documents) > 0) {
     foreach ($data->documents as $d):
         $results[] = array(
             'uid' => $d->slug,
             'title' => $d->title,
-            'subtitle' => strip_tags($d->excerpt),
-            'arg' => $baseURL . $d->slug,
+            'subtitle' => $d->summary,
+            'arg' => $baseURL . $d->mdn_url,
             'icon' => 'icon.png',
             'valid' => 'yes'
         );
@@ -80,7 +80,7 @@ if (!empty($data) && $data->count > 0) {
         'uid' => 'placeholder',
         'title' => 'No documents were found that matched "'.$query.'".',
         'subtitle' => 'Click to see the results for yourself',
-        'arg' => $baseURL . 'search?q=' . $query,
+        'arg' => $baseURL . '/en-US/search?q=' . $query,
         'icon' => 'icon.png',
         'valid' => 'yes'
     );
