@@ -47,8 +47,8 @@ function toxml($a = null, $format = 'array') {
 $results[] = array(
     'uid' => 'placeholder',
     'title' => 'Go to the website',
-    'subtitle' => $baseURL . '/en-US/docs',
-    'arg' => $baseURL . '/en-US/docs',
+    'subtitle' => $baseURL . '/en-US',
+    'arg' => $baseURL . '/en-US',
     'icon' => 'icon.png',
     'valid' => 'yes'
 );
