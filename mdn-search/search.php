@@ -56,7 +56,7 @@ $results[] = array(
 $curl = curl_init();
 curl_setopt_array($curl, array(
     CURLOPT_RETURNTRANSFER => 1,
-    CURLOPT_URL => $apiURL . $query,
+    CURLOPT_URL => $apiURL . urlencode($query),
 ));
 $output = curl_exec($curl);
 curl_close($curl);
